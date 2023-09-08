@@ -113,7 +113,7 @@ target_include_directories(
 # Triton Backend API
 #
 add_library(
-  triton-core-serverstub SHARED
+  triton-core-serverstub STATIC
   ${CMAKE_CURRENT_SOURCE_DIR}/src/tritonserver_stub.cc
 )
 

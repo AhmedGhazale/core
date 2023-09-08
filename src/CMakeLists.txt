@@ -232,7 +232,7 @@ if(${TRITON_ENABLE_ENSEMBLE})
 endif() # TRITON_ENABLE_ENSEMBLE
 
 add_library(
-  triton-core SHARED
+  triton-core STATIC
   ${SERVER_SRCS} ${SERVER_HDRS}
 )
 
@@ -503,7 +503,7 @@ if(${TRITON_ENABLE_GPU})
     triton-core
     PRIVATE
       ${CNMEM_LIBRARY}
-      CUDA::cudart
+      CUDA::cudart_static
   )
 endif() # TRITON_ENABLE_GPU
 
